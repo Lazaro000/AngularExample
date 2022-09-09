@@ -1,8 +1,8 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
+import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { People } from 'src/app/data';
 import { Person } from 'src/app/models/people.model';
@@ -15,6 +15,7 @@ import { Person } from 'src/app/models/people.model';
     MatTableModule,
     MatInputModule,
     MatFormFieldModule,
+    MatSortModule,
   ],
   templateUrl: './people-table.component.html',
   styleUrls: ['./people-table.component.scss'],

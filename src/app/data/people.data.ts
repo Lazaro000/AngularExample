@@ -15,4 +15,11 @@ export const People: Person[] = [
     company: 'Lord of the Fries',
     levelOfHappiness: '100',
   },
+  {
+    id: '3',
+    name: 'Zed Cabezuelo',
+    category: 'employee',
+    company: 'Lord of the Fries',
+    levelOfHappiness: '75',
+  },
 ];

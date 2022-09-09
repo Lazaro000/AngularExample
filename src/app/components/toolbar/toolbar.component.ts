@@ -1,16 +1,30 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { PeopleTableComponent } from './../people-table/people-table.component';
 
 @Component({
   standalone: true,
-  imports: [MatToolbarModule, MatIconModule],
+  imports: [CommonModule, MatToolbarModule, MatIconModule, MatDialogModule],
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss'],
 })
 export class ToolbarComponent implements OnInit {
-  constructor() {}
+  constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {}
+
+  openDialog(
+    enterAnimationDuration: string,
+    exitAnimationDuration: string
+  ): void {
+    this.dialog.open(PeopleTableComponent, {
+      // width: '250px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+  }
 }

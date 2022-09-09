@@ -29,6 +29,7 @@ export class PeopleTableComponent implements OnInit {
     'levelOfHappiness',
   ];
   dataSource: MatTableDataSource<Person>;
+  people = People;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
